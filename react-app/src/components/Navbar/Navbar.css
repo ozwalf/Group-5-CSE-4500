@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+.nav-header {
+    border-radius: 15px;
+    padding: 10px;
+}
+.nav-header:hover {
+    background-color: rgba(0,0,0,0.2);
+    color: rgba(255,255,255,0.75);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.nav-title {
+    color: #000;
+    justify-self: start;
+    cursor: pointer;
+    white-space: nowrap;
+    padding-left: 1vh;
+}
+.page-item {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    justify-content: end;
+    list-style: none;
+}

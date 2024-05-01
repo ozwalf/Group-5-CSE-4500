@@ -1,0 +1,21 @@
+.footer {
+    width: 100%;
+    background-color: rgba(255,255,255,0.21);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.github-mark {
+    width: 30px;
+    height: auto;
+}
+.github-mark:hover {
+    transition: 0.4s;
+    filter: invert(100%);
+}
+.footer-item {
+    list-style-type: none;
+}
