@@ -6,21 +6,19 @@ def count_elem(driver, tag_name):
     return len(driver.find_elements(By.TAG_NAME, tag_name))
 
 def userAction(driver):
-    # Initialize browser
 
-    # Define the tag name to search for
-    tag = "i"
+    # Define the tag names to search for
+    tags = ["ul", "ol"]
 
     total_reward_time = 0
 
     # Reward time for each tag
     reward_time = 10
 
-    # Count the occurrences of italic font
-    num_italic_fonts = count_elem(driver, tag)
-
-    # Calculate the total reward time based on the number of italic fonts found
-    total_reward_time = reward_time * num_italic_fonts
+    # Iterate through each tag and count its occurrences
+    for tag in tags:
+        num_tags = count_elem(driver, tag)
+        total_reward_time += reward_time * num_tags
 
     # Simulate user presence for the total reward time
     time.sleep(total_reward_time)

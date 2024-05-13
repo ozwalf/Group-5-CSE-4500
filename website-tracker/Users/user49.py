@@ -9,13 +9,15 @@ def findKeyword(driver, keyword)->bool:
 def userAction(driver):
     reward_time = 10
     total_reward_time = 0
-    clickable = driver.find_element(By.ID, "click")
-    ActionChains(driver)\
-        .click(clickable)\
-        .perform()
-    total_reward_time += reward_time
-    time.sleep(reward_time)
-
+    try:
+        clickable = driver.find_element(By.ID, "click")
+        ActionChains(driver)\
+            .click(clickable)\
+            .perform()
+        total_reward_time += reward_time
+        time.sleep(reward_time)
+    except:
+        print("Clickable not found.")
     print("Presence Time: ", total_reward_time)
 
 if __name__ == "__main__":

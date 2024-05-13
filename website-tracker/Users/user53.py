@@ -23,7 +23,7 @@ def countTagElem(driver, tag_name)->int:
         count += len(driver.find_elements(By.TAG_NAME, tags))
     return count
 
-def userActions(action, driver, reward_time, req_list)->float:
+def useActions(action, driver, reward_time, req_list)->float:
     total_reward_time=0
     if action.upper() == "KEYWORD":
         for keyword in req_list:
@@ -49,10 +49,10 @@ def userActions(action, driver, reward_time, req_list)->float:
 
 def userAction(driver):
     reward_time = 10
-    total_reward_time = userActions("KEYWORD", driver, reward_time, ["programming", "major", "CSUSB"])
-    total_reward_time += userActions("LINK", driver, reward_time, "a")
+    total_reward_time = useActions("KEYWORD", driver, reward_time, ["programming", "major", "CSUSB"])
+    total_reward_time += useActions("LINK", driver, reward_time, "a")
     tag_name = ["h1", "h2", "h3"]
-    total_reward_time += userActions("HEADERS", driver, reward_time, tag_name)
+    total_reward_time += useActions("HEADERS", driver, reward_time, tag_name)
     print("Presence Time", total_reward_time)
 
 

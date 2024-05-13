@@ -33,6 +33,15 @@ function App() {
                 <p class="main-body">I drive a honda 🤓. Not this one though, I just found this image on google</p>
                 <img class="squircular-image" src={Honda} alt="honda chevy car found on google"/> 
             </div>
+            <div class="p-row" id="section4">
+                <p class="main-body">Every sentence in this passage utilizes unique vocabulary, ensuring no repetition occurs. Crafting text under such constraints challenges creativity, requiring meticulous selection from an expansive lexicon. Each phrase stands alone, clear in meaning, showcasing flexibility and innovation.</p> 
+            </div>
+            <div class="p-row" id="section5">
+                <p class="main-body">Uniqueness in expression illustrates language’s potential for endless variation, nuanced communication. Adhering to these constraints highlights the richness available within English, demonstrating adaptability as once-used words give way to synonyms or alternative constructions.</p> 
+            </div>
+            <div class="p-row" id="section6">
+                <p class="main-body">Engaging in such exercises fosters appreciation for linguistic diversity, the art of syntax. Mastery over broad diction not only enhances writing skills but also deepens understanding across various contexts. Creative engagement with vocabulary broadens capabilities, effectively articulating complex ideas.</p> 
+            </div>
              <Footer />
         </div>
       </header>

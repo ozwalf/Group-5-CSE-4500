@@ -25,7 +25,7 @@ driver : web driver
 reward_time : value to wait on site
 req_list : list of either keyword or element tag
 '''
-def userAction(action, driver, reward_time, req_list)->float:
+def useAction(action, driver, reward_time, req_list)->float:
     total_reward_time = 0
     if action.upper() == "KEYWORD":
         for keyword in req_list:
@@ -65,11 +65,11 @@ def clickLink(driver, reward_time):
 
 def userAction(driver):
     reward_time = 10
-    total_reward_time = userAction("KEYWORD", driver, reward_time, ["batman","game"])
+    total_reward_time = useAction("KEYWORD", driver, reward_time, ["batman","game"])
     tag_name = ["img"]
-    total_reward_time += userAction("IMAGE", driver, reward_time, tag_name)
-    total_reward_time += userAction("COLOR", driver, reward_time, ['background-color: rgb(223, 207, 190);'])
-    total_reward_time += clickLink(driver, reward_time),
+    total_reward_time += useAction("IMAGE", driver, reward_time, tag_name)
+    total_reward_time += useAction("COLOR", driver, reward_time, ['background-color: rgb(223, 207, 190);'])
+    total_reward_time += clickLink(driver, reward_time)
 
 
     print("Presence Time:" , total_reward_time)
