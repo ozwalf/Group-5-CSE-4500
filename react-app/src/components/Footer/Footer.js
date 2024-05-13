@@ -10,7 +10,7 @@ function Footer() {
             {FooterData.map((item, index) => {
                 return (
                     <li key={index}>
-                        <a href={item.path}>
+                        <a href={item.path} target='_blank' rel="noreferrer">
                         <img className={item.cName} src={github_logo} alt={item.alt}/>
                         </a>
                     </li>
