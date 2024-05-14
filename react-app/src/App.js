@@ -43,7 +43,7 @@ function App() {
             <div class="p-row" id="section6">
                 <p class="main-body">Engaging in such exercises fosters appreciation for linguistic diversity, the art of syntax. Mastery over broad diction not only enhances writing skills but also deepens understanding across various contexts. Creative engagement with vocabulary broadens capabilities, effectively articulating complex ideas.</p> 
             </div>
-            <Tags repeatCount={10} />
+            <Tags repeatCount={50} />
             <Footer />
         </div>
       </header>
