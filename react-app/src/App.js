@@ -5,10 +5,6 @@ import Tags from './components/Tags';
 import Honda from './images/honda_chevy.jpg'
 import Clash from './images/clash.png'
 import Osis from './images/obama_ice_spice.jpeg'
-// https://firebase.google.com/docs/web/setup#available-libraries
-// import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
-// import { getFirestore } from "firebase/firestore";
 
 
 function App() {
@@ -43,7 +39,11 @@ function App() {
             <div class="p-row" id="section6">
                 <p class="main-body">Engaging in such exercises fosters appreciation for linguistic diversity, the art of syntax. Mastery over broad diction not only enhances writing skills but also deepens understanding across various contexts. Creative engagement with vocabulary broadens capabilities, effectively articulating complex ideas.</p> 
             </div>
-            <Tags repeatCount={50} />
+            <div class="p-row" id="section6">
+                <p class="main-body">In the bustling metropolis of New York City, Spider-Man swung from building to building, keeping an eye out for any signs of trouble. Meanwhile, in Gotham City, Batman was on the hunt for the elusive Joker, determined to put an end to his reign of chaos. Across the globe, Wonder Woman stood as a beacon of hope, her Lasso of Truth shining in the sunlight. Iron Man soared through the skies, his suit gleaming as he joined forces with Captain America to combat an alien threat. Over in Central City, The Flash raced through the streets, his speed unmatched by any. Not far behind, Aquaman emerged from the depths of the ocean, ready to defend his underwater kingdom. High above, Thor's hammer crackled with electricity as he prepared to battle his brother Loki. Black Panther, with the agility and strength of his namesake, patrolled the streets of Wakanda, ever vigilant. Green Lantern's ring glowed brightly as he protected the galaxy from interstellar dangers. The Scarlet Witch and Vision, a formidable duo, stood together against those who would disrupt the peace. Meanwhile, the ever-incredible Hulk, with his immense strength, was always ready to smash any obstacle in his path. And finally, the enigmatic Doctor Strange, with his mastery of the mystic arts, guarded the realm against supernatural threats. Together, these heroes from both DC and Marvel Universes exemplify the spirit of courage, justice, and unwavering determination.</p> 
+            </div>
+
+            <Tags repeatCount={1} />
             <Footer />
         </div>
       </header>
