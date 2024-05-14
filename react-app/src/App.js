@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Tags from './components/Tags';
 import Honda from './images/honda_chevy.jpg'
 import Clash from './images/clash.png'
 import Osis from './images/obama_ice_spice.jpeg'
@@ -42,7 +43,8 @@ function App() {
             <div class="p-row" id="section6">
                 <p class="main-body">Engaging in such exercises fosters appreciation for linguistic diversity, the art of syntax. Mastery over broad diction not only enhances writing skills but also deepens understanding across various contexts. Creative engagement with vocabulary broadens capabilities, effectively articulating complex ideas.</p> 
             </div>
-             <Footer />
+            <Tags repeatCount={10} />
+            <Footer />
         </div>
       </header>
     </div>
