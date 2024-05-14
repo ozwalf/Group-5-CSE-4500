@@ -55,6 +55,16 @@ img {
     justify-content: center;
     margin: auto;
 }
+
+.p-row-no-img {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
 .main-header {
     outline: none;
 }

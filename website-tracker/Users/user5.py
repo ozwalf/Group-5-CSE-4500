@@ -4,12 +4,12 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-driver = webdriver.Chrome()
+# driver = webdriver.Chrome()
 
-url = input("Enter the URL: ")
+# url = input("Enter the URL: ")
 
-driver.get(url)
-wait = WebDriverWait(driver, 30)  
+# driver.get("http://localhost:3000/")
+# wait = WebDriverWait(driver, 30)  
 
 def findText(driver, keyword):
     if keyword.lower() in driver.page_source.lower():
@@ -45,5 +45,5 @@ def button_interactions(url):
 
     print(f"Presence time: {presence_time} seconds")        
 
-button_interactions(url)
-driver.quit()
+# button_interactions(url)
+# driver.quit()
