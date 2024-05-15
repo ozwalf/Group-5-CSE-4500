@@ -10,15 +10,18 @@ def main():
 
     cursor = db.cursor()
 
+    print()
     qIteration = input("Iteration #: ")
     qVariant = input("Variant (Control/Test): ")
+    print()
 
     query = ("select AVG(Presence_Time) from userdata where Iteration=%s AND Variant=%s;")
     query_values = (qIteration, qVariant)
     cursor.execute(query, query_values)
     
     result = cursor.fetchall()
-    print(f"Average: {result} seconds")
+    print(f"Average: {result} seconds\n")
+    
 
     cursor.close()
     db.close()

@@ -16,4 +16,7 @@ def userAction(driver):
     timeAdded += 2 * len(lists)
     #subtract 5 seconds for every image found
     timeAdded -= 5 * len(images)
+    if (timeAdded < 0):
+        timeAdded = 0
+    
     time.sleep(timeAdded)

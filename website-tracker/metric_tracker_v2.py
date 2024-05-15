@@ -8,7 +8,7 @@ from time import strftime, localtime
 import mysql.connector
 
 def import_user_module(user_module_name):
-    module_path = f'./Control_Users/{user_module_name}.py'
+    module_path = f'./Users/{user_module_name}.py'
     spec = importlib.util.spec_from_file_location(user_module_name, module_path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -33,7 +33,7 @@ def main():
     metrics = [['Iteration', 'Variation', 'User', 'Presence_Time']]
    
     # List all user modules in the directory
-    user_files = os.listdir('./Control_Users')
+    user_files = os.listdir('./Users')
     for user_file in user_files:
         if user_file.endswith('.py') and user_file.startswith('user'):
             user_module_name = user_file[:-3]  # Strip the '.py' to get the module name
@@ -49,7 +49,7 @@ def main():
             print(f"└--Done testing {user_module_name}--┘")
             # Database insertion
             add_metric = ("INSERT INTO userdata (Iteration, Variant, User, Presence_Time) VALUES (%s, %s, %s, %s) ON DUPLICATE KEY UPDATE Presence_Time=%s")
-            data_metric = (2, "Control", user_num, presence_time, presence_time)
+            data_metric = (3, "Full", user_num, presence_time, presence_time)
             cursor.execute(add_metric, data_metric)
     
             # Commit changes to database

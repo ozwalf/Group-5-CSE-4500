@@ -26,19 +26,19 @@ def UserActions(action, driver, reward_time, req_list)->float:
         for key in req_list:
             if FindKeyword(driver, key):
                 total_reward += reward_time
-                #time.sleep(reward_time)
+                time.sleep(reward_time)
             else:
                 print(key,"Not found")
     elif action.upper() == "ELEMENT":
         number_images = CountElements(driver, req_list)
         total_reward += number_images*reward_time
-        #time.sleep(total_reward)
+        time.sleep(total_reward)
     elif action.upper() == "LINK":
         number_links = CountElements(driver, req_list)
         total_reward += reward_time * number_links
             #time.sleep(reward_time)
 
-        #time.sleep(total_reward)
+        time.sleep(total_reward)
     return total_reward
 
 def userAction(driver):

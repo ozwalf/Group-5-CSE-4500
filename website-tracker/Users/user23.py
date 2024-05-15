@@ -52,17 +52,17 @@ def userAction(driver):
         time.sleep(2)
 
         # Download all images
-        print("Downloading images...")
-        image_PATH = 'scraped_images/'
-        if not os.path.exists(image_PATH):
-            os.makedirs(image_PATH)
+        # print("Downloading images...")
+        # image_PATH = 'scraped_images/'
+        # if not os.path.exists(image_PATH):
+        #     os.makedirs(image_PATH)
 
-        counter = 0
-        for image in images:
-            counter += 1
-            new_url = image_PATH + "test" + str(counter) + ".png"
-            src = image.get_attribute("src")
-            urllib.request.urlretrieve(src, new_url)
+        # counter = 0
+        # for image in images:
+        #     counter += 1
+        #     new_url = image_PATH + "test" + str(counter) + ".png"
+        #     src = image.get_attribute("src")
+        #     urllib.request.urlretrieve(src, new_url)
 
     # Find keywords
     keywords = driver.find_elements(By.XPATH, "//*[contains(@class, 'build-stats')]")

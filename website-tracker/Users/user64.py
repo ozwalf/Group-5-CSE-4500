@@ -14,7 +14,7 @@ def countTagElem(driver, tag_name)->int:
         count += len(driver.find_elements(By.TAG_NAME, tags))
     return count
 
-def userAction(action, driver, reward_time, req_list)->float:
+def useAction(action, driver, reward_time, req_list)->float:
     total_reward_time = 0
     if action.upper() == "KEYWORD":
         for keyword in req_list:
@@ -57,9 +57,9 @@ def userAction(driver):
     
     tags = ["img"]
 
-    total_reward_time += userAction("KEYWORD", driver, reward_time, keywords)
+    total_reward_time += useAction("KEYWORD", driver, reward_time, keywords)
 
-    total_reward_time += userAction("IMAGE", driver, reward_time, tags)
+    total_reward_time += useAction("IMAGE", driver, reward_time, tags)
     
     if clickLink(driver) > 0:
         clickLink(driver)
